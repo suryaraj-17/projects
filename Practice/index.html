@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Mamae!</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('bg.jpeg');
+            background-size: cover; 
+            background-position: center top 37%; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            min-height: 100vh; 
+            margin: 0; 
+        }
+
+        /* Adjustments for navbar layout */
+        .navbar {
+            padding: 0.5rem; /* Reduced navbar height */
+        }
+
+        .navbar-brand img {
+            height: 50px; /* Set the logo height */
+            margin-right: 10px; /* Space between logo and menu */
+            border: 2px solid black; /* Black border around the logo */
+        }
+
+        /* Space between menu items */
+        .navbar-nav .nav-item {
+            margin-left: 20px; /* Space between menu items */
+        }
+
+        /* Offcanvas menu border */
+        .offcanvas {
+            border: 1px solid black; /* Black border for offcanvas menu */
+        }
+
+        /* Menu icon color */
+        .menu-icon {
+            height:50px;
+            width: 50px;
+            color: orangered; /* Default color */
+            font-size: 1rem; /* Small size for the hamburger icon */
+            border: 2px solid orangered; /* Add border */
+            background-color: transparent; /* Make sure button has no background */
+            padding: 5px; /* Adjust padding for spacing */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
+
+        .menu-icon:hover {
+            background-color: orangered; /* Change background to orangered on hover */
+            color: white; /* Change text color on hover */
+        }
+
+        /* Button color for Cart, Profile, and Login */
+        .btn-outline-success {
+            color: orangered; /* Change text color */
+            border-color: orangered; /* Change border color */
+        }
+
+        .btn-outline-success:hover {
+            background-color: orangered; /* Change background on hover */
+            color: white; /* Change text color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="teaa.jpeg" alt="Logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Hot drinks</a></li>
+                            <li><a class="dropdown-item" href="#">Cool drinks</a></li>
+                            <li><a class="dropdown-item" href="#">Snacks</a></li>
+                            <li><a class="dropdown-item" href="#">Bakery items</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex align-items-center">
+                    <button class="btn btn-outline-success me-3" type="submit">Cart</button>
+                    <button class="btn btn-outline-success me-3" type="submit">Profile</button>
+                    <a href="register.html" class="btn btn-outline-success">Sign in</a> <!-- Link to the login page -->
+                </form>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Button to trigger the offcanvas menu, placed below the navbar -->
+    <button class="menu-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" style="margin: 20px;">
+        ☰ <!-- Hamburger icon -->
+    </button>
+
+    <!-- Offcanvas menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hot Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cool Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Snacks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bakery Items</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
